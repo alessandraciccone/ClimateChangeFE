@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center py-10 px-4">
-      <img src="/climate.png" alt="Clima" className="w-40 h-40 mb-6" />
+      <img src="/climate.png" alt="Clima" className="w-70 h-70" />
       <p className="max-w-xl text-center text-lg text-gray-800 bg-white/60 rounded-lg p-4 border border-green-600 shadow-md">
         Il cambiamento climatico rappresenta una delle sfide più grandi del
         nostro tempo. L'aumento delle temperature globali, lo scioglimento dei
