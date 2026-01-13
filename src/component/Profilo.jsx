@@ -93,7 +93,7 @@ const Profilo = () => {
   if (error) {
     return (
       <div className="flex items-center justify-center min-h-screen px-4">
-        <div className="w-full max-w-md bg-white rounded-xl shadow-lg border border-sky-200 p-6">
+        <div className="w-full max-w-md rounded-xl shadow-lg border border-sky-200 p-6">
           <div className="bg-red-100 border border-red-300 text-red-700 px-4 py-3 rounded-md mb-4">
             <p className="font-medium mb-2">Errore</p>
             <p className="text-sm">{error}</p>
@@ -133,19 +133,26 @@ const Profilo = () => {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen px-4 bg-gradient-to-br from-sky-50 to-blue-100">
-      <div className="w-full max-w-md bg-white rounded-xl shadow-lg border border-sky-200 p-8">
+    <div className="flex flex-col items-center justify-center min-h-screen px-4">
+      <div className="mb-4 flex justify-center">
+          <img
+            src="/bear.png"
+            alt="Bear"
+            className="h-28 sm:h-36 md:h-48 w-auto object-contain drop-shadow-lg"
+          />
+      </div>
+      <div className="w-full max-w-md rounded-xl shadow-lg border border-sky-200 p-8 bg-sky-100">
         <h2 className="text-2xl font-bold text-sky-900 mb-6 text-center">
           Profilo Utente
         </h2>
 
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-4 from-sky-400 to-sky-600 ">
           <div className="w-24 h-24 rounded-full bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center text-3xl font-bold text-white mb-2 shadow-md">
             {user.name ? user.name[0].toUpperCase() : "?"}
           </div>
 
           <div className="text-center">
-            <div className="text-xl font-semibold text-sky-800 mb-1">
+            <div className="text-xl font-semibold text-sky-800 mb-1 from-sky-400 to-sky-600 ">
               {user.name} {user.lastname}
             </div>
             <div className="text-sm text-sky-600">{user.email}</div>
@@ -153,9 +160,9 @@ const Profilo = () => {
 
           <button
             onClick={handleLogout}
-            className="mt-6 w-full bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+            className="mt-6 w-30 bg-green-500 hover:bg-green-800 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
           >
-            Logout
+            Logoout
           </button>
         </div>
       </div>

@@ -8,6 +8,7 @@ import Cornice from "./component/Cornice";
 import Register from "./component/Register";
 import Login from "./component/Login";
 import Profilo from "./component/Profilo";
+import ClimateAnalyzer from "./component/ClimateAnalyzer";
 function App() {
   return (
     <Router>
@@ -19,8 +20,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
-            {/* aggiungi qui altre rotte */}
             <Route path="/profilo" element={<Profilo />} />
+            <Route path="/climate" element={<ClimateAnalyzer />} />
             {/* <Route path="/about" element={<About />} /> */}
             {/* <Route path="/contatti" element={<Contatti />} /> */}
           </Routes>
