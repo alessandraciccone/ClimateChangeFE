@@ -5,11 +5,7 @@ import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
 import Home from "./component/Home";
 import Cornice from "./component/Cornice";
-
-// eventuali altre pagine
-// import About from "./component/About";
-// import Contatti from "./component/Contatti";
-
+import Register from "./component/Register";
 function App() {
   return (
     <Router>
@@ -19,6 +15,7 @@ function App() {
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/register" element={<Register />} />
             {/* aggiungi qui altre rotte */}
             {/* <Route path="/about" element={<About />} /> */}
             {/* <Route path="/contatti" element={<Contatti />} /> */}

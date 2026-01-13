@@ -41,7 +41,7 @@ const NavBar = () => {
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
                   <Link
-                    to="/registrati"
+                    to="/register"
                     className="rounded-md px-3 py-2 text-sm font-medium text-teal-900 hover:bg-teal-300/50 hover:text-teal-950 transition-colors"
                   >
                     Registrati
@@ -84,7 +84,7 @@ const NavBar = () => {
         <div id="mobile-menu" className="hidden sm:hidden">
           <div className="space-y-1 px-2 pt-2 pb-3 bg-teal-300/30">
             <Link
-              to="/registrati"
+              to="/register"
               className="block rounded-md px-3 py-2 text-base font-medium text-teal-900 hover:bg-teal-300/50 hover:text-teal-950 transition-colors"
             >
               Registrati
