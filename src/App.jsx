@@ -7,6 +7,7 @@ import Home from "./component/Home";
 import Cornice from "./component/Cornice";
 import Register from "./component/Register";
 import Login from "./component/Login";
+import Profilo from "./component/Profilo";
 function App() {
   return (
     <Router>
@@ -19,6 +20,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             {/* aggiungi qui altre rotte */}
+            <Route path="/profilo" element={<Profilo />} />
             {/* <Route path="/about" element={<About />} /> */}
             {/* <Route path="/contatti" element={<Contatti />} /> */}
           </Routes>

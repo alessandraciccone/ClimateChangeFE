@@ -63,20 +63,17 @@ const NavBar = () => {
             </div>
 
             {/* User Profile Section - Hidden on Mobile */}
-            <div className="hidden sm:flex absolute inset-y-0 right-0 items-center gap-4 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              {/* Profile Picture - Clickable */}
-              <Link
-                to="/profile"
-                className="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white hover:opacity-80 transition-opacity"
-              >
-                <span className="sr-only">Open user profile</span>
-                <img
-                  src="/User.png"
-                  alt="Profile"
-                  className="size-8 rounded-full bg-white ring-2 ring-white/50 border border-green-950"
-                />
-              </Link>
-            </div>
+            <Link
+              to="/profilo"
+              className="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white hover:opacity-80 transition-opacity"
+            >
+              <span className="sr-only">Open user profile</span>
+              <img
+                src="/User.png"
+                alt="Profile"
+                className="size-8 rounded-full bg-white ring-2 ring-white/50 border border-green-950"
+              />
+            </Link>
           </div>
         </div>
 
@@ -102,7 +99,7 @@ const NavBar = () => {
               Climate
             </Link>
             <Link
-              to="/profile"
+              to="/profilo"
               className="block rounded-md px-3 py-2 text-base font-medium text-teal-900 hover:bg-teal-300/50 hover:text-teal-950 transition-colors border-t border-teal-500/30 mt-2 pt-4"
             >
               Profile

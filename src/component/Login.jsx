@@ -35,9 +35,20 @@ const Login = () => {
       }
 
       const data = await response.json();
-      console.log("LOGIN OK:", data);
+      console.log("===== LOGIN RISPOSTA =====");
+      console.log("Risposta completa:", data);
+      console.log("ID utente:", data.id);
+      console.log("Token:", data.token);
 
-      navigate("/climate");
+      // ✅ SALVA TOKEN E ID NEL LOCALSTORAGE
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("userId", data.id.toString());
+
+      console.log("Token salvato:", localStorage.getItem("token"));
+      console.log("UserID salvato:", localStorage.getItem("userId"));
+
+      // Naviga al profilo o alla home
+      navigate("/profilo"); // Cambiato da /climate a /profilo per testare
     } catch (err) {
       setError(err.message);
     } finally {
