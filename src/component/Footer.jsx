@@ -9,9 +9,7 @@ const Footer = () => {
 
       {/* Contenuto */}
       <div className="relative z-10 flex flex-col items-center gap-2">
-        <h2 className="text-lg font-semibold drop-shadow-md">
-          ClimateChangeFE
-        </h2>
+        <h2 className="text-lg font-semibold drop-shadow-md">Climate Change</h2>
         <p className="text-sm opacity-90">
           © {new Date().getFullYear()} – Tutti i diritti riservati
         </p>

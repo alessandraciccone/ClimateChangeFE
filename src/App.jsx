@@ -1,15 +1,34 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
+import Home from "./component/Home";
+import Cornice from "./component/Cornice";
+
+// eventuali altre pagine
+// import About from "./component/About";
+// import Contatti from "./component/Contatti";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <NavBar />
-      {/* Main content would go here */}
-      <main className="flex-1">{/* Il tuo contenuto principale va qui */}</main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <NavBar />
+
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* aggiungi qui altre rotte */}
+            {/* <Route path="/about" element={<About />} /> */}
+            {/* <Route path="/contatti" element={<Contatti />} /> */}
+          </Routes>
+        </main>
+
+        <Cornice />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
