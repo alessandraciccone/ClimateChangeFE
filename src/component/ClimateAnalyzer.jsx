@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import mondo from "/mondo.png";
 import SalvaPreferiti from "./SalvaPreferiti";
 import {
   LineChart,
@@ -211,7 +212,7 @@ const ClimateAnalyzer = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br p-4 sm:p-6">
       <div className="max-w-6xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 md:p-8">
+        <div className=" rounded-2xl shadow-xl p-4 sm:p-6 md:p-8  bg-sky-100">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2 flex items-center gap-2 sm:gap-3">
             <Activity className="text-blue-600" size={32} />
             <span>Analizzatore Climatico NASA</span>
@@ -227,9 +228,9 @@ const ClimateAnalyzer = () => {
                 type="text"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
-                onKeyPress={(e) => e.key === "Enter" && handleSearch()}
+                onKeyDown={(e) => e.key === "Enter" && handleSearch()}
                 placeholder="Inserisci una città (es. Roma, Parigi, Tokyo, New York...)"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none"
+                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none bg-white"
               />
             </div>
             <button
@@ -241,6 +242,17 @@ const ClimateAnalyzer = () => {
               {loading ? "Caricamento..." : "Analizza"}
             </button>
           </div>
+
+          {/* Show mondo.png only before any search (when data is null and not loading) */}
+          {data === null && !loading && (
+            <div className="flex justify-center mb-8">
+              <img
+                src={mondo}
+                alt="Mondo"
+                className="max-w-xs w-full h-auto rounded-xl"
+              />
+            </div>
+          )}
 
           {error && (
             <div className="bg-red-50 border-l-4 border-red-500 p-3 sm:p-4 mb-4 sm:mb-6 rounded">
