@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SalvaPreferiti from "./SalvaPreferiti";
 import {
   LineChart,
   Line,
@@ -251,14 +252,27 @@ const ClimateAnalyzer = () => {
             <div className="space-y-8">
               {/* Trend del Cambiamento Climatico */}
               <div className="bg-gradient-to-r from-orange-50 to-red-50 border-2 border-orange-200 rounded-xl p-6">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                  {parseFloat(data.trend.change) > 0 ? (
-                    <TrendingUp className="text-red-600" size={28} />
-                  ) : (
-                    <TrendingDown className="text-blue-600" size={28} />
-                  )}
-                  Trend Climatico: {data.cityName}
-                </h2>
+                <div className="flex justify-between items-start mb-4">
+                  <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
+                    {parseFloat(data.trend.change) > 0 ? (
+                      <TrendingUp className="text-red-600" size={28} />
+                    ) : (
+                      <TrendingDown className="text-blue-600" size={28} />
+                    )}
+                    Trend Climatico: {data.cityName}
+                  </h2>
+
+                  {/* BOTTONE SALVA PREFERITI */}
+                  <SalvaPreferiti
+                    titolo={`Analisi Climatica - ${data.cityName}`}
+                    descrizione={`Trend climatico: ${
+                      parseFloat(data.trend.change) > 0 ? "+" : ""
+                    }${data.trend.change}°C tra 2023-2024 (${
+                      data.trend.percentChange
+                    }%)`}
+                    imglink={`https://via.placeholder.com/400x300?text=Climate+${data.cityName}`}
+                  />
+                </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="bg-white rounded-lg p-4">
                     <p className="text-sm text-gray-600">Media 2023</p>

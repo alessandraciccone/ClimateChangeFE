@@ -58,6 +58,12 @@ const NavBar = () => {
                   >
                     Climate
                   </Link>
+                  <Link
+                    to="/preferiti"
+                    className="block rounded-md px-3 py-2 text-base font-medium text-teal-900 hover:bg-teal-300/50 hover:text-teal-950 transition-colors"
+                  >
+                    Preferiti
+                  </Link>
                 </div>
               </div>
             </div>
@@ -97,6 +103,13 @@ const NavBar = () => {
               className="block rounded-md px-3 py-2 text-base font-medium text-teal-900 hover:bg-teal-300/50 hover:text-teal-950 transition-colors"
             >
               Climate
+            </Link>
+
+            <Link
+              to="/preferiti"
+              className="block rounded-md px-3 py-2 text-base font-medium text-teal-900 hover:bg-teal-300/50 hover:text-teal-950 transition-colors"
+            >
+              Preferiti
             </Link>
             <Link
               to="/profilo"

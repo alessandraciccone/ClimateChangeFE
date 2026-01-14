@@ -9,6 +9,7 @@ import Register from "./component/Register";
 import Login from "./component/Login";
 import Profilo from "./component/Profilo";
 import ClimateAnalyzer from "./component/ClimateAnalyzer";
+import PaginaPreferiti from "./component/PaginaPreferiti";
 function App() {
   return (
     <Router>
@@ -24,6 +25,7 @@ function App() {
             <Route path="/climate" element={<ClimateAnalyzer />} />
             {/* <Route path="/about" element={<About />} /> */}
             {/* <Route path="/contatti" element={<Contatti />} /> */}
+            <Route path="/preferiti" element={<PaginaPreferiti />} />
           </Routes>
         </main>
 
